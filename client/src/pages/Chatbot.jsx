@@ -14,7 +14,7 @@ export default function Chatbot() {
     setLoading(true);
     setAnswer("");
     try {
-      const res = await axios.post("https://branaa-3.onrender.com/api/chatbot/ask", { question });
+      const res = await axios.post("https://brana-2-0.onrender.com/api/chatbot/ask", { question });
       setAnswer(res.data.answer);
     } catch (err) {
       setAnswer(t("errorOccurred") || "An error occurred. Please try again.");

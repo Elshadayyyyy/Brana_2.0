@@ -16,14 +16,14 @@ const ReadBook = () => {
     }
 
     axios
-      .get(`https://branaa-3.onrender.com/api/books/${id}`, {
+      .get(`https://brana-2-0.onrender.com/api/books/${id}`, {
         headers: { Authorization: token },
       })
       .then((res) => {
         console.log("✅ Book response:", res.data);
         const relativePath = res.data.filePath?.replace(/\\/g, "/"); // Handle Windows backslashes
         if (relativePath) {
-          const fullUrl = `https://branaa-3.onrender.com/${relativePath}`;
+          const fullUrl = `https://brana-2-0.onrender.com/${relativePath}`;
           console.log("📘 Full EPUB File URL:", fullUrl);
           setBookUrl(fullUrl);
         } else {

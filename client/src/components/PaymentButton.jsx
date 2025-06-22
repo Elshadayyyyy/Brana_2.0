@@ -3,7 +3,7 @@ import React from "react";
 const PaymentButton = ({ amount, orderId }) => {
   const handlePayment = async () => {
     try {
-      const res = await fetch("https://branaa-3.onrender.com/api/payment/telebirr/pay", {
+      const res = await fetch("https://brana-2-0.onrender.com/api/payment/telebirr/pay", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

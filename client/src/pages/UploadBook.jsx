@@ -32,7 +32,7 @@ export default function Upload() {
     formData.append("epub", file); 
     try {
       setLoading(true);
-      await axios.post("https://branaa-3.onrender.com/api/books/upload", formData, {
+      await axios.post("https://brana-2-0.onrender.com/api/books/upload", formData, {
         headers: {
           "Content-Type": "multipart/form-data",
           Authorization: token,

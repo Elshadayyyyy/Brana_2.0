@@ -11,7 +11,7 @@ export default function Dashboard() {
     setUser(userData);
 
     if (token) {
-      axios.get("https://branaa-3.onrender.com/api/purchases/my-purchases", {
+      axios.get("https://brana-2-0.onrender.com/api/purchases/my-purchases", {
         headers: { Authorization: token },
       })
       .then(res => setPurchases(res.data))

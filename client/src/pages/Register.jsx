@@ -14,7 +14,7 @@ export default function Register() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post("https://branaa-3.onrender.com/api/auth/register", form);
+      await axios.post("https://brana-2-0.onrender.com/api/auth/register", form);
       navigate("/login");
     } catch (err) {
       setError(err.response?.data?.msg || "Registration failed");

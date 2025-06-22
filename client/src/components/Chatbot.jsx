@@ -17,7 +17,7 @@ const ChatbotWidget  = () => {
     setLoading(true);
 
     try {
-      const res = await axios.post("https://branaa-3.onrender.com/api/chat", {
+      const res = await axios.post("https://brana-2-0.onrender.com/api/chat", {
         message: userMsg,
       });
 

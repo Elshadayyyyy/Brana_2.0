@@ -17,13 +17,13 @@ export default function BooksList() {
 
   useEffect(() => {
     // Fetch all books
-    axios.get("https://branaa-3.onrender.com/api/books")
+    axios.get("https://brana-2-0.onrender.com/api/books")
       .then(res => setBooks(res.data))
       .catch(() => setBooks([]));
 
     // Fetch user purchases
     if (token) {
-      axios.get("https://branaa-3.onrender.com/api/purchases/my-purchases", {
+      axios.get("https://brana-2-0.onrender.com/api/purchases/my-purchases", {
         headers: { Authorization: token }
       })
       .then(res => setPurchasedBooks(res.data))
@@ -36,11 +36,11 @@ export default function BooksList() {
 
   const handleBuyFreeBook = async (bookId) => {
     try {
-      await axios.post(`https://branaa-3.onrender.com/api/purchases/buy/${bookId}`, {}, {
+      await axios.post(`https://brana-2-0.onrender.com/api/purchases/buy/${bookId}`, {}, {
         headers: { Authorization: token }
       });
       alert(t("purchaseSuccess") || "Purchase successful!");
-      const res = await axios.get("https://branaa-3.onrender.com/api/purchases/my-purchases", {
+      const res = await axios.get("https://brana-2-0.onrender.com/api/purchases/my-purchases", {
         headers: { Authorization: token }
       });
       setPurchasedBooks(res.data);
@@ -71,7 +71,7 @@ export default function BooksList() {
         {books.map(book => {
           const canRead = book.price === 0 || isPurchased(book._id);
           const authorName = book.owner?.name || t("unknownAuthor") || "Unknown";
-          const fileUrl = `https://branaa-3.onrender.com/${book.filePath.replace(/\\/g, "/")}`;
+          const fileUrl = `https://brana-2-0.onrender.com/${book.filePath.replace(/\\/g, "/")}`;
 
           return (
             <div key={book._id} className="col-md-4 mb-4">
